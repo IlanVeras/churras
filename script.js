@@ -17,10 +17,20 @@ function calcular(){
     let qtdTotalBebida = bebidasBB(horas) * adultos + (bebidasBB(horas)/2 * criancas)
     let qtdTotalvegan = paoAlho(horas) * veganos
     resultado.style.padding = '20px'
-    resultado.innerHTML = `<p>${qtdTotalCarne/1000} Kg de Carne 🥩</p>`
-    resultado.innerHTML += `<p>${Math.ceil(qtdTotalCerveja / 355)} latinhas de Cerveja 🍺</p>`
-    resultado.innerHTML += `<p>${Math.ceil(qtdTotalBebida / 1000)} garrafinhas de 1 l 🥤</p>`
-    resultado.innerHTML += `<p>${Math.ceil(qtdTotalvegan)} unidades de pão de alho 🍞🧄</p>`
+    if(adultos > 0){
+        resultado.innerHTML = `<p>${qtdTotalCarne/1000} Kg de Carne 🥩</p>`
+        resultado.innerHTML += `<p>${Math.ceil(qtdTotalCerveja / 355)} latinhas de Cerveja 🍺</p>`
+    }
+
+    if(criancas > 0){
+        resultado.innerHTML += `<p>${Math.ceil(qtdTotalBebida / 1000)} garrafinhas de 1 l 🥤</p>`
+    }
+
+    if(veganos > 0){
+        resultado.innerHTML += `<p>${Math.ceil(qtdTotalvegan)} unidades de pão de alho 🍞🧄</p>`
+    } else{
+        resultado.innerHTML = "Ninguém vai ao churrasco"
+    }
 }
 
 function carnePP(horas){
