@@ -1,3 +1,3 @@
 # Churrascômetro 🥩🍖🍗... em desenvolvimento
  Calculadora de churrasco
-<img src="images/churrascometro.PNG" alt="">
+<img src="images/novochurras.PNG" alt="">
