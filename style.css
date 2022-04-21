@@ -1,6 +1,8 @@
+
 body{
     text-align: center;
     background-color: #FFC1B0;
+    /*background-attachment: fixed;*/
 }
 
 
@@ -55,3 +57,5 @@ img {
 button{
     margin-bottom: 5px;
 }
+
+
